@@ -1,0 +1,7 @@
+site_name: Demo Docs
+theme:
+  name: readthedocs
+  highlightjs: true
+markdown_extensions:
+- pymdownx.extra
+- sane_lists
