@@ -12,9 +12,9 @@
 
 ## Integration
 
-![](https://i.imgur.com/aFnqlIF.png)
+![](images/1.png)
 
-![](https://i.imgur.com/58jFrJR.png)
+![](images/2.png)
 
 ## Our workflow
 
