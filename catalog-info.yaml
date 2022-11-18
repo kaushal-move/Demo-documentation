@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo
+  name: developer-experience
   description: demo
   annotations:
     backstage.io/techdocs-ref: dir:./
@@ -14,38 +14,38 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo-portal-1
-  description: Subcomponent of Demo
+  name: Devops
+  description: Devops Team
   annotations:
     backstage.io/techdocs-ref: dir:./portal1
 spec:
   type: documentation
-  owner: microservice
+  owner: Devops
   lifecycle: experimental
-  subcomponentOf: demo
+  subcomponentOf: developer-experience
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo-portal-2
-  description: Subcomponent of Demo
+  name: Microservices
+  description: Microservices Team
   annotations:
     backstage.io/techdocs-ref: dir:./portal2
 spec:
   type: documentation
   owner: microservice
   lifecycle: experimental
-  subcomponentOf: demo
+  subcomponentOf: developer-experience
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo-portal-1-child-1
-  description: Subcomponent of demo-portal-1
+  name: Frontdoor
+  description: Team under Developer
   annotations:
     backstage.io/techdocs-ref: dir:./portal1/child1/
 spec:
   type: documentation
-  owner: microservice
+  owner: frontdoor
   lifecycle: experimental
-  subcomponentOf: demo-portal-1
+  subcomponentOf: Microservices
