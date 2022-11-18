@@ -22,7 +22,7 @@ spec:
   type: documentation
   owner: Devops
   lifecycle: experimental
-  subcomponentOf: developer-experience
+  subcomponentOf: demo-teams
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -35,7 +35,7 @@ spec:
   type: documentation
   owner: microservice
   lifecycle: experimental
-  subcomponentOf: developer-experience
+  subcomponentOf: demo-teams
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
