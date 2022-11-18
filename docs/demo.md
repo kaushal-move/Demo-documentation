@@ -1,28 +1,23 @@
-# The attack plan
+# The Graphviz Sample
 
 {% dot attack_plan.svg
     digraph G {
         rankdir=LR
-        Earth [peripheries=2]
-        Mars
-        Earth -> Mars
+        Hello [peripheries=2]
+        World
+        Hello -> World
     }
 %}
-
-```graphviz dot attack_plan.svg
-digraph G {
-    rankdir=LR
-    Earth [peripheries=2]
-    Mars
-    Earth -> Mars
-}
-```
 
 # PlantUML Samples
 
 ```plantuml classes="uml myDiagram" alt="Diagram placeholder" title="My diagram"
 @startuml
-  Goofy ->  MickeyMouse: calls
-  Goofy <-- MickeyMouse: responds
+group TCP-Handshake
+  Client  -> Server: <b>syn</b> seq=x
+  Client <-- Server: <b>syn</b> ack=x+1 seq=y
+  Client  -> Server: <b>ack</b>=y+1 seq=x+1
+  Client  -> Server: [data]
+end
 @enduml
 ```
