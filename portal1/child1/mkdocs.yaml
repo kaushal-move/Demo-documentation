@@ -1,0 +1,7 @@
+site_name: Child 1
+theme:
+  name: Child 1
+  highlightjs: true
+markdown_extensions:
+- pymdownx.extra
+- sane_lists

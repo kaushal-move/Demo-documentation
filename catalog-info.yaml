@@ -1,3 +1,4 @@
+---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -9,3 +10,42 @@ spec:
   type: documentation
   owner: microservice
   lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-portal-1
+  description: Subcomponent of Demo
+  annotations:
+    backstage.io/techdocs-ref: dir:./portal1
+spec:
+  type: documentation
+  owner: microservice
+  lifecycle: experimental
+  subcomponentOf: demo
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-portal-2
+  description: Subcomponent of Demo
+  annotations:
+    backstage.io/techdocs-ref: dir:./portal2
+spec:
+  type: documentation
+  owner: microservice
+  lifecycle: experimental
+  subcomponentOf: demo
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-portal-1-child-1
+  description: Subcomponent of demo-portal-1
+  annotations:
+    backstage.io/techdocs-ref: dir:./portal1/child1/
+spec:
+  type: documentation
+  owner: microservice
+  lifecycle: experimental
+  subcomponentOf: demo-portal-1
