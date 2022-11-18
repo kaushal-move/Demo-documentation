@@ -1,12 +1,78 @@
-# Feedback Loop
+# Developer Portal
+## Why Developer Portal
 
-## Issues
+- Current Pipelines - Mark tool sync markdowns to confluence.
+- Problems with Mark tool: No delete and move, Clumsy Header and Poor handling of relative links
+- Docs as code, no need for confluence pipelines or mkdocs website
+- Centralizing all the documentation, great for search
+- Feedback loop
+- Uses Mkdocs
+- Trust/Information Card
+- Ownership
+
+## Integration
+
+![](https://i.imgur.com/aFnqlIF.png)
+
+![](https://i.imgur.com/58jFrJR.png)
+
+## Our workflow
+
+- https://github.com/kaushal-move/Demo-documentation/blob/main/catalog-info.yaml
+- https://github.com/kaushal-move/Demo-documentation/blob/sandbox/catalog-info.yaml
+
+```plantuml classes="uml myDiagram" alt="Diagram placeholder" title="My diagram"
+@startuml
+Developer -> GitSandbox: Push changes to SandBox
+
+GitSandbox ----> DevPortalQA: QA dev portal syncs changes from sandbox
+
+Developer -> DevPortalQA: Verifies changes on Sandbox
+
+Developer --> GitMaster: Creates MR on Master with references of QA docs
+
+GitMaster -> DevPortalQA: Pord Portal Syncs the changes
+
+@enduml
+```
+
+- You can also have different catalog file for both prod and sandbox that way you have more control over documentation.
+  - https://github.com/kaushal-move/Demo-documentation/blob/main/catalog-info-sandbox.yaml
+  - https://github.com/kaushal-move/Demo-documentation/blob/sandbox/catalog-info-prod.yaml
+  ```
+  apiVersion: backstage.io/v1alpha1
+  kind: Component
+  metadata:
+    name: demo-teams
+    description: demo
+    annotations:
+      backstage.io/techdocs-ref: dir:./
+  spec:
+    type: documentation
+    owner: microservice
+    lifecycle: Production
+  ```
+
+- Compile your TechDocs locally and you don't need Sandbox.
+
+## Demo
+
+### Search Capability
+### Components
+- How can you create sub components?
+- Ownership and segregation of responsibility
+### Feedback Loop
+
+#### Issues
 Winter is coming!!
 
-## Inline Changes
+NOTE: Need to enable Issues in repo.
+
+#### Inline Changes
 Update this line
 
-# The Graphviz Sample
+### Diagrams as Code
+#### The Graphviz Sample
 {% dot attack_plan.svg
     digraph G {
         rankdir=LR
@@ -17,7 +83,7 @@ Update this line
 %}
 
 
-# PlantUML Samples
+#### PlantUML Samples
 
 ```plantuml classes="uml myDiagram" alt="Diagram placeholder" title="My diagram"
 @startuml
