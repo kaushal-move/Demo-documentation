@@ -1,6 +1,6 @@
 site_name: Portal 2
 theme:
-  name: Portal 2
+  name: mkdocs
   highlightjs: true
 markdown_extensions:
 - pymdownx.extra

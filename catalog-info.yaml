@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: developer-experience
+  name: demo-teams
   description: demo
   annotations:
     backstage.io/techdocs-ref: dir:./
