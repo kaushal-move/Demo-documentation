@@ -1,5 +1,10 @@
 # Feedback Loop
+
+## Issues
 Winter is coming!!
+
+## Inline Changes
+Update this line
 
 # The Graphviz Sample
 {% dot attack_plan.svg
